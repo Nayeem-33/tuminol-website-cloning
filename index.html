@@ -1,172 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TumiNol</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rinterio</title>
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-  <!-- DaisyUI CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <!-- font-awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/12c401b8a1.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- font-awesome CDN -->
-  <script src="https://kit.fontawesome.com/12c401b8a1.js" crossorigin="anonymous"></script>
-
-  <!-- Tailwind Custom CSS -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "pri-color": "#ABEF5F",
-            "sec-color": "#1C1C1C",
-            "head-color": "#212121",
-            "pera-color": "#494949",
-            "pera-foot-color": "#737373",
-            "link-foot-color": "#E9E9E9",
-            "btn-green": "rgba(171, 239, 95, 0.2)",
-            "btn-green-2": "rgba(171, 239, 95, 0.5)",
+    <!-- Tailwind Custom CSS -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "pri-color": "#ABEF5F",
+              "sec-color": "#1C1C1C",
+              "head-color": "#212121",
+              "pera-color": "#494949",
+              "pera-foot-color": "#737373",
+              "link-foot-color": "#E9E9E9",
+              "btn-green": "rgba(171, 239, 95, 0.2)",
+              "btn-green-2": "rgba(171, 239, 95, 0.5)",
+            },
           },
         },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <!-- Vanilla CSS -->
-  <style>
-    .roboto {
-      font-family: "Roboto", sans-serif;
-    }
+    <!-- Vanilla CSS -->
+    <style>
+      .roboto {
+        font-family: "Roboto", sans-serif;
+      }
 
-    .bored {
-      border: 2px solid red;
-    }
+      .bored {
+        border: 2px solid red;
+      }
 
-    .boreen {
-      border: 2px solid green;
-    }
-  </style>
-</head>
+      .boreen {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
 
-<body class="roboto">
-  <header>
-    <nav class="navbar">
-
-      <!-- Navbar Start -->
-      <div class="navbar-start">
-
-        <!-- Side Nav menu -->
-        <div class="mr-2">
-          <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-ghost btn-circle">
-            <img src="./assets/icon three bar.svg" alt="">
-          </label>
-        </div>
-
-        <!-- Logo -->
-        <div class="w-[90px] h-[20px]">
-          <img class="w-[90px] h-[20px]" src="./assets/YouTube_logo.png" alt="">
-        </div>
-      </div>
-
-      <!-- Navbar Center -->
-      <div class="navbar-center">
-        <!-- Search Bar -->
-        <div class="join">
-          <input class="w-[500px] input input-bordered rounded-l-full join-item" placeholder="Search" />
-          <button class="btn bg-[#F0F0F0] input-bordered rounded-r-full join-item"><img src="./assets/icon search.svg"
-              alt=""></button>
-        </div>
-
-        <!-- Microphone -->
-        <div tabindex="0" role="button" class="ml-2 btn btn-circle bg-[#F0F0F0]">
-          <img src="./assets/icon voice.svg" alt="">
-        </div>
-      </div>
-
-      <!-- Navbar End -->
-      <div class="navbar-end">
-
-        <!-- Upload -->
-        <button class="btn btn-ghost btn-circle mr-2">
-          <img src="./assets/icon upload.svg" alt="">
-        </button>
-
-        <!-- Bell -->
-        <button class="btn btn-ghost btn-circle mr-2">
-          <img src="./assets/icon bell.svg" alt="">
-        </button>
-
-        <!-- Profile -->
-        <div class="dropdown dropdown-end p-0">
-          <button class="btn-circle mr-2">
-            <img class="h-8 w-8 rounded-full" src="./assets/profile image.jpg" alt="">
-          </button>
-          <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] w-72 shadow">
-            <li>
-              <div>
-                <div><img class="h-10 w-10 rounded-full" src="./assets/profile image.jpg" alt=""></div>
-                <div>
-                  <h2>Tohfatun Noor Humairah</h2>
-                  <p>@Humairah</p>
+  <body class="roboto">
+    <header>
+      <nav class="navbar">
+        <!-- Navbar Start -->
+        <div class="navbar-start">
+          <!-- Side Nav menu -->
+          <div class="mr-2">
+            <label
+              for="my-drawer-3"
+              aria-label="open sidebar"
+              class="btn btn-ghost btn-circle"
+            >
+              <img src="./assets/icon three bar.svg" alt="" />
+            </label>
+            <div>
+              <div class="drawer">
+                <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+                <div class="drawer-side">
+                  <label
+                    for="my-drawer-3"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                  ></label>
+                  <ul class="menu bg-base-200 min-h-full w-80 p-4">
+                    <!-- Sidebar content here -->
+                    <li><a>Sidebar Item 1</a></li>
+                    <li><a>Sidebar Item 2</a></li>
+                  </ul>
                 </div>
               </div>
-            </li>
-            <hr>
-            <li><a>Sign out</a></li>
-            <hr>
-            <li><a>YouTube Studio</a></li>
-            <hr>
-            <li><a>Help</a></li>
-            <hr>
-            <li><a>Send feedback</a></li>
-            <hr>
-            <li><a>Settings</a></li>
-          </ul>
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <div class="w-[90px] h-[20px]">
+            <img
+              class="w-[90px] h-[20px]"
+              src="./assets/YouTube_logo.png"
+              alt=""
+            />
+          </div>
         </div>
 
-      </div>
-    </nav>
-  </header>
+        <!-- Navbar Center -->
+        <div class="navbar-center">
+          <!-- Search Bar -->
+          <div class="join">
+            <input
+              class="w-[500px] input input-bordered rounded-l-full join-item"
+              placeholder="Search"
+            />
+            <button
+              class="btn bg-[#F0F0F0] input-bordered rounded-r-full join-item"
+            >
+              <img src="./assets/icon search.svg" alt="" />
+            </button>
+          </div>
 
-  <main>
+          <!-- Microphone -->
+          <div
+            tabindex="0"
+            role="button"
+            class="ml-2 btn btn-circle bg-[#F0F0F0]"
+          >
+            <img src="./assets/icon voice.svg" alt="" />
+          </div>
+        </div>
 
-    <!-- main <section></section> -->
-    <div>
-      <!-- Nav Div -->
-      <div>
-        <div class="drawer">
-          <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-          <div class="drawer-side">
-            <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
-            <ul class="menu bg-base-200 min-h-full w-80 p-4">
+        <!-- Navbar End -->
+        <div class="navbar-end">
+          <!-- Upload -->
+          <button class="btn btn-ghost btn-circle mr-2">
+            <img src="./assets/icon upload.svg" alt="" />
+          </button>
 
-              <!-- Sidebar content here -->
-              <li><a>Sidebar Item 1</a></li>
-              <li><a>Sidebar Item 2</a></li>
+          <!-- Bell -->
+          <button class="btn btn-ghost btn-circle mr-2">
+            <img src="./assets/icon bell.svg" alt="" />
+          </button>
+
+          <!-- Profile -->
+          <div class="dropdown dropdown-end p-0">
+            <button class="btn-circle mr-2">
+              <img
+                class="h-8 w-8 rounded-full"
+                src="./assets/profile image.jpg"
+                alt=""
+              />
+            </button>
+            <ul
+              tabindex="0"
+              class="menu dropdown-content bg-base-100 rounded-box z-[1] w-72 shadow"
+            >
+              <li>
+                <div>
+                  <div>
+                    <img
+                      class="h-10 w-10 rounded-full"
+                      src="./assets/profile image.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h2>Tohfatun Noor Humairah</h2>
+                    <p>@Humairah</p>
+                  </div>
+                </div>
+              </li>
+              <hr />
+              <li><a>Sign out</a></li>
+              <hr />
+              <li><a>YouTube Studio</a></li>
+              <hr />
+              <li><a>Help</a></li>
+              <hr />
+              <li><a>Send feedback</a></li>
+              <hr />
+              <li><a>Settings</a></li>
             </ul>
           </div>
         </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Tags -->
+      <div class="tags"></div>
+      <div class="flex">
+        <!-- Side -->
+        <div class="w-20 px-1 text-center flex flex-col items-center">
+          <img src="./assets/icon home.svg" alt="">
+          <p class="text-[10px]">Home</p>
+          <br>
+          <img src="./assets/icon shorts.svg" alt="">
+          <p class="text-[10px]">Shorts</p>
+          <br>
+          <img src="./assets/icon subcription.svg" alt="">
+          <p class="text-[10px]">Subscriptions</p>
+          <br>
+          <img src="./assets/icon your videos.svg" alt="">
+          <p class="text-[10px]">You</p>
+        </div>
+
+        <!-- Main video grid-->
+        <div class="pt-5 w-[calc(100%-80px)] grid grid-cols-5 bg-red-500">
+
+          <!-- video start-->
+          <div>
+
+          </div>
+          <!-- video end -->
+        </div>
       </div>
+    </main>
 
-      <!-- content div -->
-      <div class="bg-red-500">
-        <img src="./assets/first-25 (1).jpg" alt="">
-      </div>
-    </div>
-  </main>
-
-  <footer>
-
-  </footer>
-</body>
-
+    <footer></footer>
+  </body>
 </html>
