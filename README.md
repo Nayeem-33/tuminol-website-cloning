@@ -46,7 +46,7 @@ This project represents my second major attempt at cloning a complex web applica
 
 ## 🎥 Demo
 
-You can see a live demo of the WeatherApp here[here](https://nayeem-33.github.io/tuminol-website-cloning/).
+You can see a live demo of the WeatherApp [here](https://nayeem-33.github.io/tuminol-website-cloning/).
 
 ### 📦 Aspect Ratio Plugin Installation and Setup
 
@@ -83,60 +83,12 @@ To use the Aspect Ratio plugin in your Tailwind CSS setup, you need to install i
    </div>
    ```
 
-### Prerequisites
-
-List any prerequisites the user needs to have installed before setting up your project.
-
-- Prerequisite 1
-- Prerequisite 2
-
 ### Installation Steps
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   git clone https://github.com/Nayeem-33/tuminol-website-cloning.git
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd yourproject
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the project:
-   ```bash
-   npm start
-   ```
-
-## 🚀 Usage
-
-Explain how to use the project, including code examples and screenshots, if necessary.
-
-```javascript
-// Example of how to use the project
-import { function } from 'module';
-
-function();
-```
-
-## 🚧 Roadmap
-
-Outline any planned future updates or features.
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-
-## 🤝 Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/YourFeature`)
-3. Commit your Changes (`git commit -m 'Add some YourFeature'`)
-4. Push to the Branch (`git push origin feature/YourFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 
@@ -144,29 +96,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Your Name - [@yourhandle](https://twitter.com/yourhandle) - your.email@example.com
+Your Name - [@linkedIn](https://www.linkedin.com/in/nayeem33/) - unayeem33@gmail.com
 
-Project Link: [https://github.com/yourusername/yourproject](https://github.com/yourusername/yourproject)
-
-## 🙏 Acknowledgements
-
-- [Resource 1](https://example.com)
-- [Resource 2](https://example.com)
-- [Resource 3](https://example.com)
-
----
-
-To include information about using the Aspect Ratio plugin in your README file, you can add a section specifically for the plugins you're using in your project. Here's how you can structure it:
-
----
-
-### 🛠️ Technologies & Plugins Used
-
-- [HTML5](https://www.w3schools.com/html/): For structuring the web pages.
-- [CSS3](https://www.w3schools.com/css/): For enhancing the visual styling of the web pages.
-- [Tailwind CSS](https://tailwindcss.com/): For utility-first styling and ensuring responsive design.
-- [DaisyUI](https://daisyui.com/): For using pre-built, customizable UI components.
-- [JavaScript](https://www.w3schools.com/js/): For adding basic interactivity and dynamic behavior to the site.
-- [Aspect Ratio Plugin](https://github.com/tailwindlabs/tailwindcss-aspect-ratio): A Tailwind CSS plugin used to manage aspect ratios of elements like images and videos.
-
-
+# THANKS FOR VISITING
