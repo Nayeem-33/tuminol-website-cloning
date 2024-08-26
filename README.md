@@ -1,7 +1,3 @@
-Creating a well-structured README file for your projects is important as it serves as the first point of contact for users and developers interacting with your code. Here's a basic README template you can customize for your project:
-
----
-
 # TumiNol Youtube Cloning
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)  
