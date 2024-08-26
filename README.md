@@ -4,8 +4,7 @@ Creating a well-structured README file for your projects is important as it serv
 
 # TumiNol Youtube Cloning
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)  
-![Contributors](https://img.shields.io/github/contributors/yourusername/yourproject.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) 
 
 ## 📖 Table of Contents
 
