@@ -45,7 +45,7 @@ This project represents my second major attempt at cloning a complex web applica
 
 ## 🎥 Demo
 
-You can see a live demo of the WeatherApp [here](https://nayeem-33.github.io/tuminol-website-cloning/).
+You can see a live demo of the project [here](https://nayeem-33.github.io/tuminol-website-cloning/).
 
 ### 📦 Aspect Ratio Plugin Installation and Setup
 
