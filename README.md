@@ -4,16 +4,15 @@
 
 ## 📖 Table of Contents
 
-- [About the Project](#about-the-project)
-- [Demo](#demo)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+- **About the Project**
+- **Project Goals**
+- **Technologies Used**
+- **Future Enhancements**
+- **Learning Journey**
+- **Demo**
+- **Aspect Ratio Plugin Installation and Setup**
+- **License**
+- **Contact**
 
 ## 📚 About the Project
 
@@ -96,6 +95,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Your Name - [@linkedIn](https://www.linkedin.com/in/nayeem33/) - unayeem33@gmail.com
+Md Nayeem Uddin - [@linkedIn](https://www.linkedin.com/in/nayeem33/) - unayeem33@gmail.com
 
 # THANKS FOR VISITING
