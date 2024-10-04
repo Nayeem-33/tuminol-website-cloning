@@ -1,22 +1,16 @@
 async function fetchCategories() {
-  let result;
   try {
     const response = await fetch(
       "https://openapi.programming-hero.com/api/phero-tube/categories"
     );
     const data = await response.json();
-    result = data;
     displayCategories(data);
-    return result;
   } catch (error) {
     console.error("Error fetching categories:", error);
   } finally {
     console.log("Fetch attempt completed");
   }
 }
-
-// let categoriesAPI = fetchCategories()
-// console.log(categoriesAPI)
 
 function displayCategories(data) {
   data.categories.forEach((dat) => {
