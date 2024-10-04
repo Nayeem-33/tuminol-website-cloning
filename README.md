@@ -95,6 +95,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Md Nayeem Uddin - [@linkedIn](https://www.linkedin.com/in/nayeem33/) - unayeem33@gmail.com
+Md Nayeem Uddin - [@linkedIn](https://www.linkedin.com/in/nayeem33/) - nayeem.webdev@gmail.com
 
 # THANKS FOR VISITING
