@@ -1,4 +1,5 @@
 let videoContainer = document.getElementById("videoContainer");
+let searchBox = document.getElementById("search-box")
 
 //  Fetch Category
 async function fetchCategories() {
@@ -172,6 +173,13 @@ function displayCateVideo(data) {
     videoContainer.appendChild(videoDiv);
   });
 }
+
+// Searched Video
+searchBox.addEventListener("keyup", function(){
+  let value = searchBox.value
+  console.log(value)
+})
+
 // Time Function
 const calculateTime = (time) => {
   if (time >= 31536000) {
