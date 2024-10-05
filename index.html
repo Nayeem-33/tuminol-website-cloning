@@ -229,7 +229,7 @@
           <!-- Container with overflow scroll -->
           <div id="btn-container" class="flex gap-2">
             <button
-            onclick="displayCategories(data)"
+              onclick="fetchAllVideo()"
               autofocus
               class="bg-zinc-100 rounded-lg font-bold text-sm py-2 px-3 hover:bg-zinc-200 focus:bg-black focus:text-white"
             >
@@ -249,7 +249,9 @@
               class="pt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
             >
               <!-- skeleton start -->
-              <div class="aspect-w-123 aspect-h-100 cursor-pointer block lg:hidden xl:block">
+              <div
+                class="aspect-w-123 aspect-h-100 cursor-pointer block lg:hidden xl:block"
+              >
                 <div>
                   <img
                     class="skeleton rounded-2xl w-full"

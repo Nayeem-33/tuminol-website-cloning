@@ -1,3 +1,6 @@
+let videoContainer = document.getElementById("videoContainer");
+
+//  Fetch Category
 async function fetchCategories() {
   try {
     const response = await fetch(
@@ -8,10 +11,13 @@ async function fetchCategories() {
   } catch (error) {
     console.error("Error fetching categories:", error);
   } finally {
-    console.log("Fetch attempt completed");
+    console.log("Category Fetched Successfully");
   }
 }
 
+fetchCategories(); // call fetch category function
+
+// Display Fetched Category
 function displayCategories(data) {
   data.categories.forEach((dat) => {
     let container = document.getElementById("btn-container");
@@ -28,18 +34,20 @@ function displayCategories(data) {
       "focus:text-white"
     );
     btn.setAttribute("id", dat.category_id);
+    btn.setAttribute("onclick", `fetchCategoryVideo(${dat.category_id})`);
     btn.innerText = dat.category;
     container.appendChild(btn);
   });
 }
-fetchCategories();
 
-async function fetchVideo() {
+// Fetch Video
+async function fetchAllVideo() {
   try {
     const response = await fetch(
       "https://openapi.programming-hero.com/api/phero-tube/videos"
     );
     const data = await response.json();
+    videoContainer.innerHTML = "";
     displayVideo(data);
   } catch (error) {
     console.log("Error:", error);
@@ -48,9 +56,11 @@ async function fetchVideo() {
   }
 }
 
+fetchAllVideo();
+
+// Display Fetched Video
 function displayVideo(data) {
   data.videos.forEach((vid) => {
-    let videoContainer = document.getElementById("videoContainer");
     let videoDiv = document.createElement("div");
     videoDiv.classList.add("aspect-w-123", "aspect-h-100", "cursor-pointer");
     videoDiv.innerHTML = `
@@ -59,48 +69,110 @@ function displayVideo(data) {
                       class="rounded-2xl w-full"
                       src=${vid.thumbnail}
                       alt="Thumbnail"
-                    />
-                  </div>
-                  <div class="flex mt-2">
-                    <div class="flex-shrink-0 mr-3">
-                      <img
-                        class="h-9 w-9 rounded-full"
-                        src=${vid.authors[0].profile_picture}
-                        alt="Profile Image"
                       />
-                    </div>
-                    <div class="flex-1 overflow-hidden">
+                      </div>
+                      <div class="flex mt-2">
+                      <div class="flex-shrink-0 mr-3">
+                      <img
+                      class="h-9 w-9 rounded-full"
+                      src=${vid.authors[0].profile_picture}
+                      alt="Profile Image"
+                      />
+                      </div>
+                      <div class="flex-1 overflow-hidden">
                       <h1 class="text-[#0f0f0f] font-bold text-base line-clamp-2">
-                        Let's Learn Web Development | Manish Paul | Learn With
-                        Manish
+                      ${vid.title}
                       </h1>
                       <p class="text-[#606060] text-sm truncate flex items-center">
-                        ${vid.authors[0].profile_name} ${
+                      ${vid.authors[0].profile_name} ${
       vid.authors[0].verified
         ? `
                         <img class="ml-1 h-4 w-4 rounded-full"
                         src='https://img.icons8.com/?size=48&id=D9RtvkuOe31p&format=png'
-                        alt="Profile Image"
-                      />`
+                        alt="Badge"
+                        />`
         : ""
     }
                       </p>
                       <p class="text-[#606060] text-sm">${
                         vid.others.views
                       } views · ${calculateTime(vid.others.posted_date)}</p>
-                    </div>
-                    <div class="flex-shrink-0 mx-1">
+                      </div>
+                      <div class="flex-shrink-0 mx-1">
                       <img src="./assets/icon three dot.svg" alt="" />
-                    </div>
-                </div>
-    `;
+                      </div>
+                      </div>
+                      `;
     videoContainer.appendChild(videoDiv);
   });
 }
 
-fetchVideo();
+// music Comedy drawing
+async function fetchCategoryVideo(id) {
+  try {
+    const response = await fetch(
+      `https://openapi.programming-hero.com/api/phero-tube/category/${id}`
+    );
+    const data = await response.json();
+    // displayVideo(data);
+    videoContainer.innerHTML = "";
+    displayCateVideo(data);
+  } catch (error) {
+    console.log("Error:", error);
+  } finally {
+    console.log("Music videos Fetched Successfully");
+  }
+}
 
-// functions
+// Display category Video
+function displayCateVideo(data) {
+  data.category.forEach((vid) => {
+    let videoDiv = document.createElement("div");
+    videoDiv.classList.add("aspect-w-123", "aspect-h-100", "cursor-pointer");
+    videoDiv.innerHTML = `
+    <div>
+        <img
+                      class="rounded-2xl w-full"
+                      src=${vid.thumbnail}
+                      alt="Thumbnail"
+                      />
+                      </div>
+                      <div class="flex mt-2">
+                      <div class="flex-shrink-0 mr-3">
+                      <img
+                      class="h-9 w-9 rounded-full"
+                      src=${vid.authors[0].profile_picture}
+                      alt="Profile Image"
+                      />
+                      </div>
+                      <div class="flex-1 overflow-hidden">
+                      <h1 class="text-[#0f0f0f] font-bold text-base line-clamp-2">
+                      ${vid.title}
+                      </h1>
+                      <p class="text-[#606060] text-sm truncate flex items-center">
+                      ${vid.authors[0].profile_name} ${
+      vid.authors[0].verified
+        ? `
+                        <img class="ml-1 h-4 w-4 rounded-full"
+                        src='https://img.icons8.com/?size=48&id=D9RtvkuOe31p&format=png'
+                        alt="Badge"
+                        />`
+        : ""
+    }
+                      </p>
+                      <p class="text-[#606060] text-sm">${
+                        vid.others.views
+                      } views · ${calculateTime(vid.others.posted_date)}</p>
+                      </div>
+                      <div class="flex-shrink-0 mx-1">
+                      <img src="./assets/icon three dot.svg" alt="" />
+                      </div>
+                      </div>
+                      `;
+    videoContainer.appendChild(videoDiv);
+  });
+}
+// Time Function
 const calculateTime = (time) => {
   if (time >= 31536000) {
     let year = Math.floor(time / 31536000);
